@@ -1,0 +1,11 @@
+name: Problematic behaviour demo
+on:
+  push:
+    paths:
+      - file.txt
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: exit 1
